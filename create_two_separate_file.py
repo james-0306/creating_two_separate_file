@@ -10,7 +10,13 @@ class FileSeparator:
 
         input_numbers = [int(num) for num in numbers]
 
-        
+        with open(self.even_file, "w") as even_file, open(self.odd_file, "w") as odd_file:
+            for num in input_numbers:
+                if num % 2 == 0:
+                    even_file.write(str(num ** 2) + "\n")
+                else:
+                    odd_file.write(str(num ** 3) + "\n")
+
 
 
 
