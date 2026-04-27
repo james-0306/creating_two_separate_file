@@ -4,4 +4,13 @@ class FileSeparator:
         self.even_file = even_file
         self.odd_file = odd_file
 
-   
+    def process(self):
+        with open(self.input_file, "r") as file:
+            numbers = file.read().split()
+
+        input_numbers = [int(num) for num in numbers]
+
+        
+
+
+
